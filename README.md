@@ -11,7 +11,7 @@ yarn link
 ### ENV encryption
 
 ```bash
-senv --encrypt ./path/to/raw/env/file
+npx senv --encrypt ./path/to/raw/env/file
 ```
 
 You will be prompted for a password. An encrypted file will be saved on the same path with `.senv` extension.
