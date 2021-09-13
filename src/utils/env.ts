@@ -43,7 +43,9 @@ export const parseEnv = (envRaw: string): ParsedEnv =>
           : {}
         )
       }),
-      {}
+      {
+        PATH: process.env.PATH as string
+      }
     );
 
 // Argv parser
