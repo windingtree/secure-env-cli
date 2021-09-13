@@ -24,6 +24,6 @@ jobs:
           registry-url: "https://registry.npmjs.org"
           scope: "@windingtree"
       - name: Publish to npmjs.org
-        run: yarn run exec --scope @windingtree/secure-env-cli npm publish
+        run: yarn publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
