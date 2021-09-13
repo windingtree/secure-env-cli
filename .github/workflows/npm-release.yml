@@ -1,0 +1,29 @@
+name: Public Release to npmjs.com
+
+on:
+  release:
+    types: [created]
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - name: Setup
+        run: yarn install
+      - name: Build the package
+        run: yarn build
+      - name: Run tests
+        run: yarn test
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+          registry-url: "https://registry.npmjs.org"
+          scope: "@windingtree"
+      - name: Publish to npmjs.org
+        run: yarn run exec --scope @windingtree/secure-env-cli npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}

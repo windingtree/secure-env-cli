@@ -1,0 +1,63 @@
+{
+  "name": "@windingtree/secure-env-cli",
+  "description": "CLI for running scripts using encrypted environment variables",
+  "version": "1.0.0",
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "senv": "bin/index.js"
+  },
+  "files": [
+    "dist",
+    "bin"
+  ],
+  "scripts": {
+    "lint": "npx eslint . --ext .ts",
+    "test": "npx jest",
+    "test:coverage": "npx jest --coverage",
+    "build": "rm -rf dist && npx tsc -p tsconfig-build.json"
+  },
+  "homepage": "https://github.com/windingtree/secure-env-cli",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/windingtree/secure-env-cli.git"
+  },
+  "keywords": [
+    "windingtree",
+    "cli",
+    "encryption",
+    "env",
+    "typescript"
+  ],
+  "author": "Winding Tree Developers <dev@windingtree.com>",
+  "contributors": [
+    "Kostiantyn Smyrnov <kostysh@gmail.com>"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/windingtree/secure-env-cli/issues"
+  },
+  "dependencies": {
+    "chalk": "4.1.2",
+    "clear": "0.1.0",
+    "crypto-js": "4.1.1",
+    "prompts": "2.4.1",
+    "arg": "5.0.1"
+  },
+  "devDependencies": {
+    "@types/jest": "27.0.1",
+    "@types/crypto-js": "4.0.2",
+    "@types/prompts": "2.0.14",
+    "@types/clear": "0.1.2",
+    "@typescript-eslint/eslint-plugin": "4.31.0",
+    "@typescript-eslint/parser": "4.31.0",
+    "@types/node": "16.9.1",
+    "eslint": "7.32.0",
+    "jest": "27.2.0",
+    "ts-jest": "27.0.5",
+    "typescript": "4.4.3"
+  }
+}
