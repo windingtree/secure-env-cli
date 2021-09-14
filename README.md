@@ -1,5 +1,5 @@
 # Secure ENV CLI
-CLI for running scripts using encrypted environment variables
+No more accidental key leaks. Use encrypted environment variables when running your scripts.
 
 ## Usage
 
